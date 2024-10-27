@@ -1,7 +1,7 @@
 # SRGAN
 I am trying to improve the Image Super Resolution Model called SRGAN, which is based on a research paper from 2017
 
-'''
+```
 @article{tensorlayer2017,
 author = {Dong, Hao and Supratak, Akara and Mai, Luo and Liu, Fangde and Oehmichen, Axel and Yu, Simiao and Guo, Yike},
 journal = {ACM Multimedia},
@@ -18,4 +18,4 @@ year = {2017}
   year={2021},
   organization={IEEE}
 }
-'''
+```
