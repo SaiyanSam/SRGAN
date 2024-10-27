@@ -1,5 +1,6 @@
 # SRGAN
-I am trying to improve the Image Super Resolution Model called SRGAN, which is based on a research paper from 2017
+I am trying to improve the Image Super Resolution Model called SRGAN, which is based on a research paper from 2017.
+[Paper](https://arxiv.org/pdf/1609.04802)
 
 ```
 @article{tensorlayer2017,
