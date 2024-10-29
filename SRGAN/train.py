@@ -126,8 +126,12 @@ def train():
 
     # Changed learning rate from 0.05 to 0.001 for the discriminator
     # since the discriminator was overpowering the generator very quickly
+    # After epoch660, learning rate for discriminator changed to 0.005 - created poorer results (epoch 830 results)
+    # Changed back to 0.001
+    # After 1200 epoch, 1580 epoch had poorer results
+    # Changing lr of disc to 0.0001
     lr_v = tlx.optimizers.lr.StepDecay(learning_rate=0.05, step_size=1000, gamma=0.1, last_epoch=-1, verbose=True)
-    lr_v2 = tlx.optimizers.lr.StepDecay(learning_rate=0.001, step_size=1000, gamma=0.1, last_epoch=-1, verbose=True)
+    lr_v2 = tlx.optimizers.lr.StepDecay(learning_rate=0.0001, step_size=1000, gamma=0.1, last_epoch=-1, verbose=True)
     g_optimizer_init = tlx.optimizers.Momentum(lr_v, 0.9)
     g_optimizer = tlx.optimizers.Momentum(lr_v, 0.9)
     d_optimizer = tlx.optimizers.Momentum(lr_v2, 0.9)
