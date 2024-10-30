@@ -130,8 +130,12 @@ def train():
     # Changed back to 0.001
     # After 1200 epoch, 1580 epoch had poorer results
     # Changing lr of disc to 0.0001
+    # Results still not good
+    # Resuming from epoch 1200 for lr 0.004
+    # Results stored on epoch 1520, better result than epoch 1200
+    # But d_loss hovering < 0.9 now, will continue to observe change in next epochs, setting 1520 as new baseline
     lr_v = tlx.optimizers.lr.StepDecay(learning_rate=0.05, step_size=1000, gamma=0.1, last_epoch=-1, verbose=True)
-    lr_v2 = tlx.optimizers.lr.StepDecay(learning_rate=0.0001, step_size=1000, gamma=0.1, last_epoch=-1, verbose=True)
+    lr_v2 = tlx.optimizers.lr.StepDecay(learning_rate=0.004, step_size=1000, gamma=0.1, last_epoch=-1, verbose=True)
     g_optimizer_init = tlx.optimizers.Momentum(lr_v, 0.9)
     g_optimizer = tlx.optimizers.Momentum(lr_v, 0.9)
     d_optimizer = tlx.optimizers.Momentum(lr_v2, 0.9)
