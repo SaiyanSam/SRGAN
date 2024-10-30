@@ -1,2 +1,5 @@
 The checkpoints for the Generator and Discriminator will be stored here.
 I will upload my weights once I am done fine-tuning and upgrades.
+
+Update:
+Discriminator weights too large to be uploaded and unnecessary during testing, hence only Generator weights will be uploaded here.
